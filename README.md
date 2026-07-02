@@ -1,2 +1,4 @@
-# ft_printf
-Implementation of printf function from C stdio library
+# ft_printf - Print Formatted Characters
+Implementation of printf function from libc stdio library.
+
+1- Percorrer a str procurando os formats %

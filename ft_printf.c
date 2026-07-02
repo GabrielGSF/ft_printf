@@ -6,13 +6,13 @@
 /*   By: gdos-san <gdos-san@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/24 17:23:02 by gdos-san          #+#    #+#             */
-/*   Updated: 2026/06/24 17:24:09 by gdos-san         ###   ########.fr       */
+/*   Updated: 2026/07/02 19:08:37 by gdos-san         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h" 
 
-int	ft_printf(const char *s, ...)
+int	ft_printf(const char *f_str, ...)
 {
-	
+
 }

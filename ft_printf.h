@@ -6,7 +6,7 @@
 /*   By: gdos-san <gdos-san@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/24 17:19:28 by gdos-san          #+#    #+#             */
-/*   Updated: 2026/06/24 17:25:12 by gdos-san         ###   ########.fr       */
+/*   Updated: 2026/07/02 18:19:13 by gdos-san         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdarg.h>
 
 int	ft_printf(const char *s, ...);
 
