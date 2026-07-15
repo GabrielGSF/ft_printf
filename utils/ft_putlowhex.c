@@ -1,40 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_putlowhex.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gdos-san <gdos-san@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/24 17:23:02 by gdos-san          #+#    #+#             */
-/*   Updated: 2026/07/15 18:25:20 by gdos-san         ###   ########.fr       */
+/*   Created: 2026/07/15 18:15:00 by gdos-san          #+#    #+#             */
+/*   Updated: 2026/07/15 18:19:51 by gdos-san         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h" 
-
-int	ft_printf(const char *f_str, ...)
+int		ft_putlowhex(unsigned int nbr)
 {
-	va_list	values;
-	size_t	i;
-	int	count;
-
-	va_start(values, f_str);
-	i = 0;
-	count = 0;
-	while (f_str[i])
-	{
-		if (f_str[i] == '%')
-			count += ft_parse_format(f_str[++i], values);
-		else
-			count += ft_putchar(f_str[i]);
-		i++;
-	}
-	va_end(values);
-	return (i);
-}
-
-int	main(void)
-{
-	ft_printf("oi%soii", "- cavalo -");
-	return (0);
+	
 }
