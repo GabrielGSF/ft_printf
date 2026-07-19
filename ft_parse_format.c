@@ -3,33 +3,34 @@
 /*                                                        :::      ::::::::   */
 /*   ft_parse_format.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gdos-san <gdos-san@student.42.fr>          +#+  +:+       +#+        */
+/*   By: device935 <device935@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/15 16:32:43 by gdos-san          #+#    #+#             */
-/*   Updated: 2026/07/15 18:25:46 by gdos-san         ###   ########.fr       */
+/*   Updated: 2026/07/17 20:05:20 by device935        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_parse_format(void *f, va_list values)
+int	ft_parse_format(char f, va_list values)
 {
 	if (f == 'c')
-		return ft_putchar(va_arg(values, char));
+		return (ft_putchar(va_arg(values, int)));
 	if (f == 's')
-		return ft_putstr(va_arg(values, char *));
+		return (ft_putstr(va_arg(values, char *)));
 	if (f == 'p')
-		return ft_putptr(va_arg(values, void *));
+		return (ft_putptr(va_arg(values, void *)));
 	if (f == 'd')
-		return ft_putnbr(va_arg(values, int));
+		return (ft_putnbr(va_arg(values, int)));
 	if (f == 'i')
-		return ft_putnbr(va_arg(values, int));
+		return (ft_putnbr(va_arg(values, int)));
 	if (f == 'u')
-		return ft_putunsnbr(va_arg(values, unsigned int));
+		return (ft_putunsnbr(va_arg(values, unsigned int)));
 	if (f == 'x')
-		return ft_putlowhex(va_arg(values, unsigned int));
+		return (ft_putlowhex(va_arg(values, unsigned int)));
 	if (f == 'X')
-		return ft_putuphex(va_arg(values, unsigned int));
+		return (ft_putuphex(va_arg(values, unsigned int)));
 	if (f == '%')
-		return ft_putchar('%');
+		return (ft_putchar('%'));
+	return (0);
 }

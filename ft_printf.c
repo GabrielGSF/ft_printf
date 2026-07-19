@@ -3,30 +3,32 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gdos-san <gdos-san@student.42.fr>          +#+  +:+       +#+        */
+/*   By: device935 <device935@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/24 17:23:02 by gdos-san          #+#    #+#             */
-/*   Updated: 2026/07/15 18:25:20 by gdos-san         ###   ########.fr       */
+/*   Updated: 2026/07/17 20:05:26 by device935        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h" 
 
-int	ft_printf(const char *f_str, ...)
+int	ft_parse_format(char f, va_list values);
+
+int	ft_printf(const char *fstr, ...)
 {
 	va_list	values;
 	size_t	i;
-	int	count;
+	int		count;
 
-	va_start(values, f_str);
+	va_start(values, fstr);
 	i = 0;
 	count = 0;
-	while (f_str[i])
+	while (fstr[i])
 	{
-		if (f_str[i] == '%')
-			count += ft_parse_format(f_str[++i], values);
+		if (fstr[i] == '%')
+			count += ft_parse_format(fstr[++i], values);
 		else
-			count += ft_putchar(f_str[i]);
+			count += ft_putchar(fstr[i]);
 		i++;
 	}
 	va_end(values);
