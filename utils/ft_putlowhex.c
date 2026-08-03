@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putlowhex.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gdos-san <gdos-san@student.42.fr>          +#+  +:+       +#+        */
+/*   By: device935 <device935@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/15 18:15:00 by gdos-san          #+#    #+#             */
-/*   Updated: 2026/07/15 18:19:51 by gdos-san         ###   ########.fr       */
+/*   Updated: 2026/07/21 09:47:36 by device935        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_putlowhex(unsigned int nbr)
-{
-	
-}
+#include "../ft_printf.h"
+
+int		ft_putlowhex(unsigned int nbr);

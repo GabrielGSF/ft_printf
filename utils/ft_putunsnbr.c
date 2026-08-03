@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putunsnbr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gdos-san <gdos-san@student.42.fr>          +#+  +:+       +#+        */
+/*   By: device935 <device935@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/15 18:20:56 by gdos-san          #+#    #+#             */
-/*   Updated: 2026/07/15 18:21:05 by gdos-san         ###   ########.fr       */
+/*   Updated: 2026/07/21 09:47:53 by device935        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_putunsnbr(unsigned int nbr)
-{
-	
-}
+#include "../ft_printf.h"
+
+int		ft_putunsnbr(unsigned int nbr);

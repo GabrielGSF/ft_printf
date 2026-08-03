@@ -6,13 +6,12 @@
 /*   By: device935 <device935@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/24 17:23:02 by gdos-san          #+#    #+#             */
-/*   Updated: 2026/07/17 20:05:26 by device935        ###   ########.fr       */
+/*   Updated: 2026/07/21 09:12:41 by device935        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h" 
-
-int	ft_parse_format(char f, va_list values);
+#include "ft_printf.h"
+#include <stdio.h>
 
 int	ft_printf(const char *fstr, ...)
 {
@@ -32,11 +31,5 @@ int	ft_printf(const char *fstr, ...)
 		i++;
 	}
 	va_end(values);
-	return (i);
-}
-
-int	main(void)
-{
-	ft_printf("oi%soii", "- cavalo -");
-	return (0);
+	return (count);
 }

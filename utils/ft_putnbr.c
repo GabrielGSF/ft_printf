@@ -3,14 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gdos-san <gdos-san@student.42.fr>          +#+  +:+       +#+        */
+/*   By: device935 <device935@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/15 18:16:21 by gdos-san          #+#    #+#             */
-/*   Updated: 2026/07/15 18:20:07 by gdos-san         ###   ########.fr       */
+/*   Updated: 2026/07/21 09:48:35 by device935        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_putnbr(int nbr)
+#include "../ft_printf.h"
+
+int	ft_putnbr(int nbr)
 {
-	
+	int	count;
+
+	count = ft_putstr(ft_itoa(nbr));
+	return (count);
 }

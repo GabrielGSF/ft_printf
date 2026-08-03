@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putptr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gdos-san <gdos-san@student.42.fr>          +#+  +:+       +#+        */
+/*   By: device935 <device935@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/15 18:06:58 by gdos-san          #+#    #+#             */
-/*   Updated: 2026/07/15 18:20:18 by gdos-san         ###   ########.fr       */
+/*   Updated: 2026/07/21 09:47:45 by device935        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_putptr(void *ptr)
-{
-	
-}
+#include "../ft_printf.h"
+
+int		ft_putptr(void *ptr);

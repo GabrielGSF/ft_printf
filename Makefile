@@ -3,14 +3,23 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: gdos-san <gdos-san@student.42.fr>          +#+  +:+       +#+         #
+#    By: device935 <device935@student.42.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/06/24 17:22:27 by gdos-san          #+#    #+#              #
-#    Updated: 2026/06/24 17:31:24 by gdos-san         ###   ########.fr        #
+#    Updated: 2026/08/03 09:29:32 by device935        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = ft_printf.c
+SRCS = ./utils/ft_itoa.c \
+       ./utils/ft_putchar.c \
+       ./utils/ft_putlowhex.c \
+       ./utils/ft_putnbr.c \
+       ./utils/ft_putptr.c \
+       ./utils/ft_putstr.c \
+       ./utils/ft_putunsnbr.c \
+       ./utils/ft_putuphex.c \
+	ft_parse_format.c \
+	ft_printf.c \
 
 OBJS = $(SRCS:.c=.o)
 
@@ -18,12 +27,12 @@ CC = cc
 RM = rm -f
 CFLAGS = -Wall -Wextra -Werror
 
-NAME = ft_printf.a
+NAME = libftprintf.a
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar rcs $(NAME) $(OBS)
+	ar rcs $(NAME) $(OBJS)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@

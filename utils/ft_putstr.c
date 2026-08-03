@@ -3,21 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gdos-san <gdos-san@student.42.fr>          +#+  +:+       +#+        */
+/*   By: device935 <device935@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/15 18:05:56 by gdos-san          #+#    #+#             */
-/*   Updated: 2026/07/15 18:22:58 by gdos-san         ###   ########.fr       */
+/*   Updated: 2026/07/21 09:47:49 by device935        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
-int		ft_putstr(char *str)
+#include "../ft_printf.h"
+
+int	ft_putstr(char *str)
 {
 	int	count;
-	
+
+	count = 0;
 	while (*str)
 	{
-		ft_putchar(str++);
+		ft_putchar(*str++);
 		count++;
 	}
 	return (count);
