@@ -1,24 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_utoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: device935 <device935@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/21 08:38:41 by device935         #+#    #+#             */
-/*   Updated: 2026/08/04 11:17:25 by device935        ###   ########.fr       */
+/*   Created: 2026/08/04 11:06:14 by device935         #+#    #+#             */
+/*   Updated: 2026/08/04 11:29:17 by device935        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 
-static int	ft_count_digits(long long n)
+static int	ft_count_digits(unsigned long long n)
 {
 	int	count;
 
 	count = 1;
-	if (n < 0)
-		n = -n;
 	while (n >= 10)
 	{
 		n /= 10;
@@ -27,14 +25,7 @@ static int	ft_count_digits(long long n)
 	return (count);
 }
 
-static int	ft_is_negative(long long n)
-{
-	if (n < 0)
-		return (1);
-	return (0);
-}
-
-static void	ft_put_digit(char *s, long long n, int len)
+static void	ft_put_digit(char *s, unsigned long long n, int len)
 {
 	while (n >= 10)
 	{
@@ -44,23 +35,16 @@ static void	ft_put_digit(char *s, long long n, int len)
 	s[--len] = (char)('0' + n);
 }
 
-char	*ft_itoa(long long n)
+char	*ft_utoa(unsigned long long n)
 {
 	char	*str;
 	int		len;
-	int		sign;
 
-	sign = ft_is_negative(n);
-	len = ft_count_digits(n) + sign;
+	len = ft_count_digits(n);
 	str = (char *)malloc((len + 1) * sizeof(char));
 	if (!str)
 		return (NULL);
 	str[len] = '\0';
-	if (sign)
-	{
-		str[0] = '-';
-		n = -n;
-	}
 	ft_put_digit(str, n, len);
 	return (str);
 }

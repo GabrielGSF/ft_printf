@@ -6,17 +6,16 @@
 /*   By: device935 <device935@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/21 09:00:15 by device935         #+#    #+#             */
-/*   Updated: 2026/08/03 21:42:38 by device935        ###   ########.fr       */
+/*   Updated: 2026/08/04 11:41:00 by device935        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include <stdio.h>
-#include <limits.h>
 
 int	main(void)
 {
-	ft_printf("hex: %x\n", 200);
-    ft_printf("HEX: %X\n", 200);
+	ft_printf("Unsigned ft_printf: %u\n", -1);
+	printf("Unsigned printf: %c\n", '\0');
 	return (0);
 }
