@@ -6,18 +6,17 @@
 #    By: device935 <device935@student.42.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/06/24 17:22:27 by gdos-san          #+#    #+#              #
-#    Updated: 2026/08/03 09:29:32 by device935        ###   ########.fr        #
+#    Updated: 2026/08/03 21:36:31 by device935        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS = ./utils/ft_itoa.c \
        ./utils/ft_putchar.c \
-       ./utils/ft_putlowhex.c \
+       ./utils/ft_puthex.c \
        ./utils/ft_putnbr.c \
        ./utils/ft_putptr.c \
        ./utils/ft_putstr.c \
        ./utils/ft_putunsnbr.c \
-       ./utils/ft_putuphex.c \
 	ft_parse_format.c \
 	ft_printf.c \
 

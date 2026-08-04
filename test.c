@@ -6,7 +6,7 @@
 /*   By: device935 <device935@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/21 09:00:15 by device935         #+#    #+#             */
-/*   Updated: 2026/07/21 10:10:10 by device935        ###   ########.fr       */
+/*   Updated: 2026/08/03 21:42:38 by device935        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 int	main(void)
 {
-	printf("Maior valor de um int (positivo): %d\n", 2147483647);
-    printf("Menor valor de um int (negativo): %d\n", -2147483649);
+	ft_printf("hex: %x\n", 200);
+    ft_printf("HEX: %X\n", 200);
 	return (0);
 }

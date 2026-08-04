@@ -6,7 +6,7 @@
 /*   By: device935 <device935@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/24 17:19:28 by gdos-san          #+#    #+#             */
-/*   Updated: 2026/07/21 09:02:11 by device935        ###   ########.fr       */
+/*   Updated: 2026/08/03 21:37:05 by device935        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,7 @@ int		ft_putstr(char *str);
 int		ft_putptr(void *ptr);
 int		ft_putnbr(int nbr);
 int		ft_putunsnbr(unsigned int nbr);
-int		ft_putlowhex(unsigned int nbr);
-int		ft_putuphex(unsigned int nbr);
+int		ft_puthex(char f, unsigned int nbr);
 char	*ft_itoa(int n);
 
 #endif
