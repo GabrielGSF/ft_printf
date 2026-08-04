@@ -3,22 +3,36 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: device935 <device935@student.42.fr>        +#+  +:+       +#+        */
+/*   By: gdos-san <gdos-san@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/15 18:16:21 by gdos-san          #+#    #+#             */
-/*   Updated: 2026/08/04 11:22:30 by device935        ###   ########.fr       */
+/*   Updated: 2026/08/04 18:54:47 by gdos-san         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 
-int	ft_putnbr(char f, int nbr)
+int	ft_putnbr(char f, long n)
 {
 	int	count;
 
-	if (f == 'i' || 'd')
-		count = ft_putstr(ft_itoa(nbr));
+	count = 0;
+	if (f == 'i' || f == 'd')
+	{
+		if (n < 0)
+		{
+			count += ft_putchar('-');
+			n *= -1;
+		}
+		if (n > 9)
+			count += ft_putnbr(f, n / 10);
+		count += ft_putchar(n % 10 + '0');
+	}
 	if (f == 'u')
-		count = ft_putstr(ft_utoa(nbr));
+	{
+		if (n > 9)
+			count += ft_putnbr(f, n / 10);
+		count += ft_putchar(n % 10 + '0');
+	}
 	return (count);
 }

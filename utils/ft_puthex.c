@@ -3,27 +3,44 @@
 /*                                                        :::      ::::::::   */
 /*   ft_puthex.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: device935 <device935@student.42.fr>        +#+  +:+       +#+        */
+/*   By: gdos-san <gdos-san@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/15 18:21:15 by gdos-san          #+#    #+#             */
-/*   Updated: 2026/08/03 21:39:40 by device935        ###   ########.fr       */
+/*   Updated: 2026/08/04 18:53:43 by gdos-san         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 
-int	ft_puthex(char f, unsigned int nbr)
+static int	hex(unsigned long long nbr, char *base)
 {
-	char	*base;
-	int		count;
+	int	count;
 
-	if (f == 'X')
-		base = "0123456789ABCDEF";
-	else if (f == 'x')
-		base = "0123456789abcdef";
 	count = 0;
 	if (nbr >= 16)
-		count += ft_puthex(f, nbr / 16);
+		count += hex(nbr / 16, base);
 	count += ft_putchar(base[nbr % 16]);
+	return (count);
+}
+
+int	ft_puthex(char f, unsigned long long nbr)
+{
+	int		count;
+
+	count = 0;
+	if (f == 'x')
+		count += hex(nbr, "0123456789abcdef");
+	if (f == 'X')
+		count += hex(nbr, "0123456789ABCDEF");
+	if (f == 'p')
+	{
+		if (nbr == 0)
+			return (write(1, "(nil)", 5));
+		else
+		{			
+			count += write(1, "0x", 2);
+			count += hex(nbr, "0123456789abcdef");
+		}
+	}
 	return (count);
 }

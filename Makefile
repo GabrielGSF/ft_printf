@@ -3,19 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: device935 <device935@student.42.fr>        +#+  +:+       +#+         #
+#    By: gdos-san <gdos-san@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/06/24 17:22:27 by gdos-san          #+#    #+#              #
-#    Updated: 2026/08/04 11:27:36 by device935        ###   ########.fr        #
+#    Updated: 2026/08/04 18:49:07 by gdos-san         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = ./utils/ft_itoa.c \
-	   ./utils/ft_utoa.c \
-       ./utils/ft_putchar.c \
+SRCS = ./utils/ft_putchar.c \
        ./utils/ft_puthex.c \
        ./utils/ft_putnbr.c \
-       ./utils/ft_putptr.c \
        ./utils/ft_putstr.c \
 		ft_parse_format.c \
 		ft_printf.c \
